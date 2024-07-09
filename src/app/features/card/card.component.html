@@ -11,12 +11,6 @@
     <mat-card-content>
       <p> Raça: {{ bovine().race }} <span>Sexo: {{ bovine().sex }}</span></p>  
       <p> Stituação: {{ bovine().situation }} </p>
-      @if(bovine().motherEarring) {
-        <p> Brinco da Mãe: {{ bovine().motherEarring }} </p>
-      }
-      @if(bovine().fatherEarring) {
-        <p> Brinco do Pai: {{ bovine().fatherEarring }} </p>
-      }
       <p> Nacimento: {{ bovine().dateOfBirth |  date:'dd/MM/yyyy' }} </p>
       </mat-card-content>
     <mat-card-actions>
