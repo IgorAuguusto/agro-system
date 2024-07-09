@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
 import { ApiBovineServiceService } from '../../../shared/services/api-bovine-service.service';
 import { Router } from '@angular/router';
 import { ConfirmationDialogService } from '../../../shared/services/confirmation-dialog.service';
@@ -60,12 +60,17 @@ export default class HomeComponent implements OnInit {
 
   onDelete(bovineId: string) {
     this.#confirmationDialogService
-    .openDialog()
-    .pipe(filter((answer) => answer === true))
-    .subscribe(() => {
-        this.#apiBovineService.httpBovineDelete(bovineId).subscribe(() => {
-           this.#apiBovineService.httpBovineList$().subscribe();
-        }) 
-    });
+      .openDialog()
+      .pipe(
+        filter((answer) => answer === true),
+        switchMap(() => this.#apiBovineService.httpBovineDelete(bovineId)),
+        switchMap(() => this.#apiBovineService.httpBovineList$()),
+        combineLatestWith(this.#searchService.search$)
+      )
+      .subscribe(([bovineList, searchTerm]) => {
+        this.bovineList = bovineList || []; 
+        this.filterBovineList(searchTerm);
+      });
   }
+  
 }
