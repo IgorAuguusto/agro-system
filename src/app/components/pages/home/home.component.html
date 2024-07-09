@@ -1,0 +1,10 @@
+<div class="flex-container-home">
+    @for (bovine of  filteredBovineList; track bovine.id) {  
+        <app-card  [bovine]="bovine" (edit)="onEdit(bovine.id)" (delete)="onDelete(bovine.id)"></app-card>
+    }@empty {
+        <app-no-items/>
+    }
+</div>
+
+
+

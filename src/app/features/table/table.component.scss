@@ -1,0 +1,33 @@
+:host {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 87vh;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid var(--grey);
+    }
+    
+    th {
+        background-color: var(--primary-010);
+        color: var(--white);
+    }
+    
+    td {
+        background-color: var(--white);
+    }
+    
+    tr:hover td {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+}

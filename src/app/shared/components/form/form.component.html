@@ -1,0 +1,123 @@
+<form [formGroup]="bovineForm" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    @if (!isEdit()) {
+      <h1>Cadastro Bovino</h1>
+    }@else {
+     <h1>Editar Bovino</h1>
+    }
+    
+    <label>
+      Brinco:
+      <input type="text" class="uppercase-input" formControlName="earring" [maxLength]="8">
+    </label>
+  
+    @if (bovineForm.get('earring')?.hasError('pattern')) {
+        <p> Deve conter 8 caracteres Alfanumericos </p>
+    }@else if (bovineForm.get('earring')?.hasError('checkEarring')) {
+        <p> Brinco já cadastrado </p>
+    }
+    
+    <br>
+
+    <label>
+      Nome:
+      <input type="text" id="name-input" formControlName="name" [maxLength]="20" required>
+      @if (bovineForm.get('name')?.hasError('pattern')) {
+        <p> O nome deve ter no minimo 3 caracteres </p>
+      }
+    </label>
+
+    <br>
+
+    <label>
+      Url da Imagem:
+      <input type="text" formControlName="urlImage" required>
+    </label>
+
+    <br>
+
+    <select formControlName="situation">
+      <option value="">Selecione a situação</option>
+      @for (situation of situations; track situation) {
+        <option [value]="situation"> {{ situation }} </option>
+      }
+    </select>
+
+    <br>
+
+    <fieldset>
+      <legend> Selecione o Sexo </legend>
+      <div class="sex-container"> 
+        <br>
+        <label>
+          <input type="radio" [value]="sex.MALE" formControlName="sex" checked>
+            <span>Macho</span>
+        </label>
+        <label>
+          <input type="radio" [value]="sex.FEMALE" formControlName="sex">
+            <span>Femea</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <br>
+
+    <label>
+      Brinco da Mãe:
+      <input  type="text" formControlName="motherEarring" class="uppercase-input" [maxLength]="8">
+      @if (bovineForm.get('motherEarring')?.hasError('checkParentsEarring')) {
+        <p> Brinco não encontrado em nenhuma Fêmea cadastrada </p>
+      }  
+    </label>
+    
+    <br>
+
+    <label>
+      Brinco do Pai:
+      <input formControlName="fatherEarring" class="uppercase-input" [maxLength]="8">
+      @if (bovineForm.get('fatherEarring')?.hasError('checkParentsEarring')) {
+        <p> Brinco não encontrado em nenhum Macho cadastrada </p>
+      }  
+    </label>
+    
+    <br>
+
+    <select formControlName="race">
+      <option value="">Selecione a Raça</option>
+      @for (race of races; track race) {
+        <option [value]="race"> {{ race }} </option>
+      }
+    </select>
+
+    <br>
+
+    <label> Nascimento:
+      <input type="date" formControlName="dateOfBirth"> 
+    </label>
+
+    @if (bovineForm.get('sex')?.value === 'F') {
+      <br>
+      <label for="pregnancyDate">Data da Prenhês:
+        <input type="date" formControlName="pregnancyDate" (change)="calculateNextDueDate()">
+      </label>
+      <br>
+      <label for="dueDate">Data Próximo Parto: 
+        <input type="date" [value]="dueDate | date:'yyyy-MM-dd'" readonly>
+      </label>
+      <br>
+      <label>Data Último Parto: 
+        <input type="date" formControlName="lastBirthDate">
+      </label>
+    }
+
+
+    <button type="submit" [disabled]="!bovineForm.valid" class="btn btn-primary" >Salvar</button>
+    <app-back-to-home/>
+  </div>
+</form>
+  <!-- <hr>
+    BOIIIIIIIIIIII: {{ bovine() | json }}
+    <hr>
+    {{ bovineForm.value | json }}
+    <hr>
+    {{ bovineForm.valid | json }} -->

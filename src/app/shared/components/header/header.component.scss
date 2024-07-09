@@ -1,0 +1,46 @@
+:host {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+        width: 100%;
+        background-color: var(--primary);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: var(--black);
+    }
+
+    div > a {
+        border: solid 2px var(--black);
+    }
+    
+    input {
+        border: 1px solid var(--grey);
+        border-radius: 4px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+    
+    .content-container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            height: 92px;
+            flex-wrap: wrap;
+        }
+
+        .content-container {
+            height: 40px;
+        }
+      
+        h1 {
+            font-size: 13pt;
+        }
+    }
+}

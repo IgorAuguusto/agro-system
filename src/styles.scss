@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #2fbf71;
+    --primary-010: #21804d;
+
+    --white: #fff;
+
+    --grey: #9b9ba0;
+
+    --black: #10101a;
+    --black-010: #2a2a30;
+
+    --red: #c90025;
+    --red-10: #a3001e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: var(--black);
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-conteiner {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+
+    &.btn-primary, &.btn-primary-circle {
+        color: var(--black-010);
+        background: var(--primary);
+
+        &:hover {
+            background: var(--primary-010);
+            color: var(--white);
+        }
+    }
+
+    &.btn-danger, &.btn-danger-circle {
+        color: var(---white);
+        background: var(--red);
+
+        &:hover {
+            background: var(--red-10);
+        }
+    }
+
+    &.btn-primary, &.btn-danger {
+        font-size: 16px;
+        border-radius: 3px;
+        padding: 10px 20px;
+    }
+}
+

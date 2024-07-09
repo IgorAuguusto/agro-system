@@ -1,0 +1,4 @@
+@defer (when getBovineId()) {
+    <app-form [bovine]="getBovineId()" [isEdit]="true" (done)="onSubmit($event)"></app-form>
+}
+

@@ -1,0 +1,12 @@
+:host {
+    div {
+        height: 77vh;
+    }
+    
+    mat-card {
+        background-color: var(--black-010);
+        font-size: 2rem;
+        color: var(--white);
+        margin-top: 5rem;
+    }
+}

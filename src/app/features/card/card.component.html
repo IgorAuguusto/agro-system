@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title> {{ bovine().earring }} </mat-card-title>
+      <mat-card-subtitle> {{ bovine().name }} </mat-card-subtitle>
+    </mat-card-header>
+    @if (bovine().urlImage) {
+      <a [routerLink]="['/view-bovine/', bovine().id]">
+        <img mat-card-image [src]="bovine().urlImage" alt="Photo of a bovine">
+      </a>  
+    }    
+    <mat-card-content>
+      <p> Raça: {{ bovine().race }} <span>Sexo: {{ bovine().sex }}</span></p>  
+      <p> Stituação: {{ bovine().situation }} </p>
+      @if(bovine().motherEarring) {
+        <p> Brinco da Mãe: {{ bovine().motherEarring }} </p>
+      }
+      @if(bovine().fatherEarring) {
+        <p> Brinco do Pai: {{ bovine().fatherEarring }} </p>
+      }
+      <p> Nacimento: {{ bovine().dateOfBirth |  date:'dd/MM/yyyy' }} </p>
+      </mat-card-content>
+    <mat-card-actions>
+      <button class="btn btn-primary" (click)="edit.emit()" >Editar</button>
+      <button class="btn btn-danger" (click)="delete.emit()">Deletar</button>
+    </mat-card-actions>
+</mat-card>

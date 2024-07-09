@@ -1,0 +1,13 @@
+<div class="container">
+    <strong>
+        <a [routerLink]="['/']">
+            <h1> Agro System </h1>
+        </a>
+    </strong>
+    @if (currentRoute === '/') {
+       <div class="content-container">
+            <a class="btn btn-primary" [routerLink]="['/create-bovine']">Cadastrar Bovino</a>
+            <input [(ngModel)]="search" (ngModelChange)="onSearch()" placeholder="Search bovines...">
+       </div>
+    }
+</div>
