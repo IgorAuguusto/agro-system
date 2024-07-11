@@ -17,6 +17,11 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     <router-outlet/>
   </div>
   <app-footer/>
+  `,
+  styles: `
+    router-outlet {
+      min-height: 90vh;
+    }
   `
 })
 export class AppComponent {

@@ -3,9 +3,9 @@
     {
       "id": "9c00",
       "earring": "FALOL122",
-      "name": "Breno Wolpine Oli",
+      "name": "Breno Wolpine",
       "urlImage": "https://pbs.twimg.com/media/EWtdC4kWkAAl_lr.jpg",
-      "situation": "Seca",
+      "situation": "Em Lactação",
       "sex": "M",
       "motherEarring": "",
       "fatherEarring": "",
@@ -29,16 +29,16 @@
       "lastBirthDate": ""
     },
     {
-      "id": "839e",
-      "earring": "ABCD1234",
-      "name": "Angus",
-      "urlImage": "https://dicas.boisaude.com.br/wp-content/uploads/2021/12/rac%CC%A7as-de-boi-.jpg",
-      "situation": "Em Lactação",
+      "id": "a1ed",
+      "earring": "1234ABCD",
+      "name": "Bull",
+      "urlImage": "https://t3.ftcdn.net/jpg/05/61/67/86/360_F_561678619_CU3mp4IW8PbY3AhDQvZid6j3TimRoeWr.jpg",
+      "situation": "Seca",
       "sex": "M",
       "motherEarring": "",
-      "fatherEarring": "",
+      "fatherEarring": "ABCD1234",
       "race": "Holandês",
-      "dateOfBirth": "2024-07-24",
+      "dateOfBirth": "2024-07-08",
       "pregnancyDate": "",
       "lastBirthDate": ""
     }
