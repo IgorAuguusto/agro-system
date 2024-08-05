@@ -1,20 +1,6 @@
 {
   "Bovines": [
     {
-      "id": "9c00",
-      "earring": "FALOL122",
-      "name": "Breno Wolpine",
-      "urlImage": "https://pbs.twimg.com/media/EWtdC4kWkAAl_lr.jpg",
-      "situation": "Em Lactação",
-      "sex": "M",
-      "motherEarring": "",
-      "fatherEarring": "",
-      "race": "Holandês",
-      "dateOfBirth": "2024-08-01",
-      "pregnancyDate": "",
-      "lastBirthDate": ""
-    },
-    {
       "id": "839e",
       "earring": "ABCD1234",
       "name": "Angus",
@@ -39,6 +25,20 @@
       "fatherEarring": "ABCD1234",
       "race": "Holandês",
       "dateOfBirth": "2024-07-08",
+      "pregnancyDate": "",
+      "lastBirthDate": ""
+    },
+    {
+      "id": "0de7",
+      "earring": "AFON1234",
+      "name": "Afonso",
+      "urlImage": "https://pbs.twimg.com/media/EWtdC4kWkAAl_lr.jpg",
+      "situation": "Em Lactação",
+      "sex": "M",
+      "motherEarring": "",
+      "fatherEarring": "ABCD1234",
+      "race": "Jersey",
+      "dateOfBirth": "2022-02-12",
       "pregnancyDate": "",
       "lastBirthDate": ""
     }
