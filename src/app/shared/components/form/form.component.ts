@@ -1,5 +1,5 @@
-import { JsonPipe, DatePipe } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output, inject, input } from '@angular/core';
+import { DatePipe, JsonPipe } from '@angular/common';
+import { Component, OnInit, inject, input, output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 // Interface
 import { Bovine } from '../../interfaces/bovine.interface';
@@ -30,7 +30,7 @@ export class FormComponent implements OnInit {
   #fb = inject(FormBuilder);
   #apiBovineService = inject(ApiBovineServiceService);
 
-  @Output() done = new EventEmitter<Bovine>();
+  done = output<Bovine>();
   public bovine = input<Bovine | null>(null);
   public isEdit = input<boolean | null>(null);
   public bovineForm!: FormGroup; 

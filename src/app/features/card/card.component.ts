@@ -1,13 +1,13 @@
-import { Component, EventEmitter, Output, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 // Material
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 import { DatePipe } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 // Interface
 import { Bovine } from '../../shared/interfaces/bovine.interface';
 // Enum
-import { Sex } from './../../shared/interfaces/enuns/sex.enum';
 import { RouterLink } from '@angular/router';
+import { Sex } from './../../shared/interfaces/enuns/sex.enum';
 
 @Component({
   selector: 'app-card',
@@ -25,6 +25,6 @@ export class CardComponent {
   public bovine = input.required<Bovine>();
   public female = Sex.FEMALE;
 
-  @Output() edit = new EventEmitter();
-  @Output() delete = new EventEmitter();
+  edit = output();
+  delete = output();
 }

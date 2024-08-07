@@ -16,8 +16,6 @@
     }@else if (bovineForm.get('earring')?.hasError('checkEarring')) {
         <p> Brinco já cadastrado </p>
     }
-    
-    <br>
 
     <label>
       Nome:
@@ -27,14 +25,10 @@
       }
     </label>
 
-    <br>
-
     <label>
       Url da Imagem:
       <input type="text" formControlName="urlImage" required>
     </label>
-
-    <br>
 
     <select formControlName="situation">
       <option value="">Selecione a situação</option>
@@ -43,12 +37,10 @@
       }
     </select>
 
-    <br>
-
     <fieldset>
       <legend> Selecione o Sexo </legend>
       <div class="sex-container"> 
-        <br>
+        
         <label>
           <input type="radio" [value]="sex.MALE" formControlName="sex" checked>
             <span>Macho</span>
@@ -60,8 +52,6 @@
       </div>
     </fieldset>
 
-    <br>
-
     <label>
       Brinco da Mãe:
       <input  type="text" formControlName="motherEarring" class="uppercase-input" [maxLength]="8">
@@ -70,8 +60,6 @@
       }  
     </label>
     
-    <br>
-
     <label>
       Brinco do Pai:
       <input formControlName="fatherEarring" class="uppercase-input" [maxLength]="8">
@@ -80,7 +68,7 @@
       }  
     </label>
     
-    <br>
+    
 
     <select formControlName="race">
       <option value="">Selecione a Raça</option>
@@ -89,35 +77,26 @@
       }
     </select>
 
-    <br>
-
     <label> Nascimento:
       <input type="date" formControlName="dateOfBirth"> 
     </label>
 
     @if (bovineForm.get('sex')?.value === 'F') {
-      <br>
+      
       <label for="pregnancyDate">Data da Prenhês:
         <input type="date" formControlName="pregnancyDate" (change)="calculateNextDueDate()">
       </label>
-      <br>
+      
       <label for="dueDate">Data Próximo Parto: 
         <input type="date" [value]="dueDate | date:'yyyy-MM-dd'" readonly>
       </label>
-      <br>
+      
       <label>Data Último Parto: 
         <input type="date" formControlName="lastBirthDate">
       </label>
     }
-
-
     <button type="submit" [disabled]="!bovineForm.valid" class="btn btn-primary" >Salvar</button>
     <app-back-to-home/>
   </div>
 </form>
-  <!-- <hr>
-    BOIIIIIIIIIIII: {{ bovine() | json }}
-    <hr>
-    {{ bovineForm.value | json }}
-    <hr>
-    {{ bovineForm.valid | json }} -->
+
