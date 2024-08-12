@@ -15,6 +15,20 @@
       "lastBirthDate": ""
     },
     {
+      "id": "839e",
+      "earring": "ABCD1234",
+      "name": "Angus",
+      "urlImage": "https://dicas.boisaude.com.br/wp-content/uploads/2021/12/rac%CC%A7as-de-boi-.jpg",
+      "situation": "Em Lactação",
+      "sex": "M",
+      "motherEarring": "",
+      "fatherEarring": "",
+      "race": "Holandês",
+      "dateOfBirth": "2024-07-24",
+      "pregnancyDate": "",
+      "lastBirthDate": ""
+    },
+    {
       "id": "a1ed",
       "earring": "1234ABCD",
       "name": "Bull",
@@ -25,20 +39,6 @@
       "fatherEarring": "ABCD1234",
       "race": "Holandês",
       "dateOfBirth": "2024-07-08",
-      "pregnancyDate": "",
-      "lastBirthDate": ""
-    },
-    {
-      "id": "0de7",
-      "earring": "AFON1234",
-      "name": "Afonso",
-      "urlImage": "https://pbs.twimg.com/media/EWtdC4kWkAAl_lr.jpg",
-      "situation": "Em Lactação",
-      "sex": "M",
-      "motherEarring": "",
-      "fatherEarring": "ABCD1234",
-      "race": "Jersey",
-      "dateOfBirth": "2022-02-12",
       "pregnancyDate": "",
       "lastBirthDate": ""
     }

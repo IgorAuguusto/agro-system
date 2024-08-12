@@ -1,11 +1,9 @@
-import { Component, inject, input } from '@angular/core';
-// Interface
-import { Bovine } from '../../shared/interfaces/bovine.interface';
+import { Component, inject } from '@angular/core';
 // Pipe
 import { DatePipe } from '@angular/common';
-import { ApiBovineServiceService } from '../../shared/services/api-bovine-service.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { BackToHomeComponent } from '../../shared/components/back-to-home/back-to-home.component';
+import { ApiBovineServiceService } from '../../shared/services/api-bovine-service.service';
 
 @Component({
   selector: 'app-table',
