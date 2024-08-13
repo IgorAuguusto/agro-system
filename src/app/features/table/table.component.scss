@@ -6,7 +6,7 @@
     
     table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: collapse;  
     }
     
     th, td {
@@ -17,11 +17,12 @@
     
     th {
         background-color: var(--primary-010);
-        color: var(--white);
+        color: var(--black);
     }
     
     td {
-        background-color: var(--white);
+        background-color: var(--black);
+        color: var(--white);
     }
     
 }
