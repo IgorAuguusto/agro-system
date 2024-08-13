@@ -1,50 +1,67 @@
 :host {
     .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 10vh;
-        width: 100%;
-        background-color: var(--primary);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 10vh;
+      width: 100%;
+      background-color: var(--primary);
     }
-
+  
     div {
-        display: flex;
+      display: flex;
     }
-
+  
     h1 {
-        font-size: 2.5rem;
-        color: var(--black);
+      font-size: 2.5rem;
+      color: var(--black);
     }
-
+  
     div > a {
-        border: solid 2px var(--black);
-    }
-    
-    input {
-        border: 1px solid var(--grey);
-        border-radius: 4px;
-        background-color: var(--black);
-        color: var(--white);
+      border: solid 2px var(--black);
     }
     
     .content-container {
-        display: flex;
-        gap: 1rem;
+      display: flex;
+      gap: 1rem;
     }
-
+  
+    .search-container {
+      position: relative;
+    }
+  
+    .search-container input {
+      width: 100%; 
+      padding-right: 2rem; 
+      border: 1px solid var(--grey);
+      border-radius: 4px;
+      background-color: var(--black);
+      color: var(--white);
+      box-sizing: border-box; 
+    }
+  
+    .search-container svg {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%); 
+      fill: var(--white);
+      pointer-events: none; 
+    }
+  
     @media (max-width: 600px) {
-        .container {
-            height: 92px;
-            flex-wrap: wrap;
-        }
-
-        .content-container {
-            height: 40px;
-        }
+      .container {
+        height: 120px;
+        flex-wrap: wrap;
+      }
+  
+      .content-container {
+        height: 40px;
+      }
       
-        h1 {
-            font-size: 13pt;
-        }
+      h1 {
+        font-size: 13pt;
+      }
     }
-}
+  }
+  
