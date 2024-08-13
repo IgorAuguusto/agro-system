@@ -1,10 +1,8 @@
 :host {
-    .container {
-        display: flex;
-        margin-top: 30vh;
-        flex-direction: column;
-        justify-content: center;
-    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     table {
         width: 100%;

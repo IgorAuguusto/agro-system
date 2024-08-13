@@ -66,6 +66,6 @@ export class ConfirmationDialogService {
   constructor() { }
 
   openDialog(): Observable<boolean> {  
-    return this.matDialog.open(ConfirmationDialogComponent).afterClosed();;
+    return this.matDialog.open(ConfirmationDialogComponent).afterClosed();
   }
 }

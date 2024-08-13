@@ -1,9 +1,7 @@
 :host {
-    .flex-container-home {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1em;
-        margin: 4vh 5rem;
-    }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 4vh 5rem;
 }

@@ -34,8 +34,8 @@ export default class HomeComponent implements OnInit {
   #searchService = inject(SearchService);
 
   public isDeleting = signal<boolean>(false);
-  public bovineList = signal< Bovine[]>([]);
-  public filteredBovineList = signal< Bovine[]>([]);
+  public bovineList = signal<Bovine[]>([]);
+  public filteredBovineList = signal<Bovine[]>([]);
 
   ngOnInit(): void {
     this.#apiBovineService.httpBovineList$()

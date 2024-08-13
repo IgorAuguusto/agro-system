@@ -1,49 +1,47 @@
-<div class="container">
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Brinco</th>
-                <th>Nome</th>
-                <th>Situação</th>
-                <th>Sexo</th>
-                @if(getBovineId()?.motherEarring) {
-                    <th>Brinco da Mãe</th>
-                }
-                @if(getBovineId()?.fatherEarring) {
-                    <th>Brinco do Pai</th>
-                }
-                <th>Raça</th>
-                <th>Data de Nascimento</th>
-                @if (getBovineId()?.sex === 'F') {
-                    <th>Data de Prenhez</th>
-                    <th>Data do Próximo Parto</th>
-                    <th>Data do Último Parto</th>
-                }
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ getBovineId()?.id }}</td>
-                <td>{{ getBovineId()?.earring }}</td>
-                <td>{{ getBovineId()?.name }}</td>
-                <td>{{ getBovineId()?.situation }}</td>
-                <td>{{ getBovineId()?.sex }}</td>
-                @if(getBovineId()?.motherEarring) {
-                    <td>{{ getBovineId()?.motherEarring }}</td>
-                }
-                @if(getBovineId()?.fatherEarring) {
-                    <td>{{ getBovineId()?.fatherEarring }}</td>
-                }
-                <td>{{ getBovineId()?.race }}</td>
-                <td>{{ getBovineId()?.dateOfBirth | date:'dd/MM/yyyy' }}</td>
-                @if (getBovineId()?.sex === 'F') {
-                    <td>{{ getBovineId()?.pregnancyDate | date:'dd/MM/yyyy' }}</td>
-                    <td>{{ getBovineId()?.nextDueDate | date:'dd/MM/yyyy' }}</td>
-                    <td>{{ getBovineId()?.lastBirthDate | date:'dd/MM/yyyy' }}</td>
-                }
-            </tr>
-        </tbody>
-    </table>
-    <app-back-to-home/>
-</div>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Brinco</th>
+            <th>Nome</th>
+            <th>Situação</th>
+            <th>Sexo</th>
+            @if(getBovineId()?.motherEarring) {
+                <th>Brinco da Mãe</th>
+            }
+            @if(getBovineId()?.fatherEarring) {
+                <th>Brinco do Pai</th>
+            }
+            <th>Raça</th>
+            <th>Data de Nascimento</th>
+            @if (getBovineId()?.sex === 'F') {
+                <th>Data de Prenhez</th>
+                <th>Data do Próximo Parto</th>
+                <th>Data do Último Parto</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ getBovineId()?.id }}</td>
+            <td>{{ getBovineId()?.earring }}</td>
+            <td>{{ getBovineId()?.name }}</td>
+            <td>{{ getBovineId()?.situation }}</td>
+            <td>{{ getBovineId()?.sex }}</td>
+            @if(getBovineId()?.motherEarring) {
+                <td>{{ getBovineId()?.motherEarring }}</td>
+            }
+            @if(getBovineId()?.fatherEarring) {
+                <td>{{ getBovineId()?.fatherEarring }}</td>
+            }
+            <td>{{ getBovineId()?.race }}</td>
+            <td>{{ getBovineId()?.dateOfBirth | date:'dd/MM/yyyy' }}</td>
+            @if (getBovineId()?.sex === 'F') {
+                <td>{{ getBovineId()?.pregnancyDate | date:'dd/MM/yyyy' }}</td>
+                <td>{{ getBovineId()?.nextDueDate | date:'dd/MM/yyyy' }}</td>
+                <td>{{ getBovineId()?.lastBirthDate | date:'dd/MM/yyyy' }}</td>
+            }
+        </tr>
+    </tbody>
+</table>
+<app-back-to-home/>
