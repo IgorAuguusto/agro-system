@@ -1,13 +1,16 @@
 <header class="container">
-    <strong>
-        <a [routerLink]="['/']">
-            <h1> Agro System </h1>
-        </a>
-    </strong>
+    <div>
+        <strong>
+            <a [routerLink]="['/']">
+                <h1> Agro System </h1>
+            </a>
+        </strong>
+        <img src="/assets/img/bovineLogo.png" width="60px" height="60px"/>
+    </div>
     @if (currentRoute === '/') {
        <div class="content-container">
             <a class="btn btn-primary" [routerLink]="['/create-bovine']">Cadastrar Bovino</a>
-            <input [(ngModel)]="search" (ngModelChange)="onSearch()" placeholder="Search bovines...">
+            <input [(ngModel)]="search" (ngModelChange)="onSearch()" placeholder=" Pesquisar Bovino...">
        </div>
     }
 </header>

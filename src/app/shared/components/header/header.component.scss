@@ -8,6 +8,10 @@
         background-color: var(--primary);
     }
 
+    div {
+        display: flex;
+    }
+
     h1 {
         font-size: 2.5rem;
         color: var(--black);
